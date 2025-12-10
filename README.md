@@ -3,15 +3,15 @@
 ### Установка и сборка компонентов
 1) Установить зависимости и собрать бандл:
    ```bash
-   cd /Users/dkoziavin/code/home-projects/courses/lit-components/lit
+   cd [U PATH]/lit-components/lit
    npm install
    npm run build
    ```
-   Результат: `lit/dist/lit-components.js` – самодостаточный бандл (включает lit).
+   Результат: `lit/dist/lit-components.js` –  бандл (включает lit).
 
 2) Если хотите использовать локальную копию в демо, скопируйте файл:
    ```bash
-   cd /Users/dkoziavin/code/home-projects/courses/lit-components
+   cd [U PATH]/lit-components
    cp lit/dist/lit-components.js vanilla/lit-components.js
    cp lit/dist/lit-components.js react/lit-components.js
    cp lit/dist/lit-components.js vue/lit-components.js
@@ -20,7 +20,7 @@
 
 ### Vanilla демо
 ```bash
-cd /Users/dkoziavin/code/home-projects/courses/lit-components/vanilla
+cd [U PATH]/lit-components/vanilla
 npx serve .   # или любой статический сервер
 # открыть http://localhost:3000/
 ```
@@ -28,7 +28,7 @@ npx serve .   # или любой статический сервер
 
 ### React демо
 ```bash
-cd /Users/dkoziavin/code/home-projects/courses/lit-components/react
+cd [U PATH]/lit-components/react
 npm install
 npm run dev   # http://localhost:5173
 ```
@@ -36,7 +36,7 @@ JSX использует `<hello-greeting>` и `<lit-button>`, событие `b
 
 ### Vue демо
 ```bash
-cd /Users/dkoziavin/code/home-projects/courses/lit-components/vue
+cd [U PATH]/lit-components/vue
 npm install
 npm run dev   # http://localhost:5173
 ```
@@ -45,4 +45,4 @@ npm run dev   # http://localhost:5173
 ### API компонентов
 - `<lit-button>`: атрибуты `label`, `variant="primary|secondary"`, `disabled`; событие `button-click` (bubbles + composed).
 - `<hello-greeting>`: атрибуты `name`, `message`.
-
+- `<hello-greeting>`: атрибуты `path`, `isVisible`.
