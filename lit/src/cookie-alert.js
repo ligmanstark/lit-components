@@ -65,18 +65,6 @@ export class LitCookieAlert extends LitElement {
     );
   }
 
-  #renderLink() {
-    return html`
-      <a
-        class="cursor-pointer text-cornflower-900 transition-opacity hover:opacity-80"
-        href=${props.href}
-        target=${props.target ?? nothing}
-        rel=${props.rel ?? nothing}
-      >
-        политики конфиденциальности и обработки персональных данных
-      </a>
-    `;
-  }
 
   render() {
     if (!this.isVisible) return null;
