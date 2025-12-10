@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lit components — vanilla demo</title>
+    <script type="module" src="./lit-components.js"></script>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+        padding: 32px;
+        background: #f6f8fb;
+        color: #1f2933;
+      }
+
+      .card {
+        background: white;
+        padding: 24px;
+        border-radius: 14px;
+        box-shadow: 0 12px 40px rgba(15, 107, 255, 0.08);
+        max-width: 540px;
+      }
+
+      .row {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin: 16px 0;
+      }
+
+      #log {
+        margin-top: 12px;
+        color: #0f6bff;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <hello-greeting
+        name="Василий"
+        message="Компоненты готовы к работе."
+      ></hello-greeting>
+
+      <div class="row">
+        <lit-button id="primaryBtn" label="Нажми меня"></lit-button>
+        <lit-button
+          variant="secondary"
+          label="Вторичная"
+          id="secondaryBtn"
+        ></lit-button>
+      </div>
+      <div id="log">События: пока ничего.</div>
+    </div>
+    <footer>
+      <cookie-alert></cookie-alert>
+    </footer>
+    <script type="module">
+      const log = document.getElementById("log");
+      const primary = document.getElementById("primaryBtn");
+      const secondary = document.getElementById("secondaryBtn");
+
+      const handleClick = (label) => {
+        log.textContent = `Событие button-click от "${label}"`;
+      };
+
+      primary.addEventListener("button-click", () => handleClick("primary"));
+      secondary.addEventListener("button-click", () =>
+        handleClick("secondary")
+      );
+    </script>
+  </body>
+</html>
