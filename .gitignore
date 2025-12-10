@@ -3,3 +3,4 @@ react/node_modules
 vue/node_modules
 vanilla/node_modules
 lit/.vscode
+lit/dist
